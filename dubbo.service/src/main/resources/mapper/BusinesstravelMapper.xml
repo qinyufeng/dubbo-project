@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qyf.dubbowechat.mapper.BusinesstravelMapper">
+
+	<!-- 开启二级缓存 -->
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.qyf.dubbowechat.entity.Businesstravel">
+		<id column="numid" property="numid" />
+		<result column="applyuser" property="applyuser" />
+		<result column="applydate" property="applydate" />
+		<result column="name" property="name" />
+		<result column="deptid" property="deptid" />
+		<result column="type" property="type" />
+		<result column="project" property="project" />
+		<result column="reason" property="reason" />
+		<result column="days" property="days" />
+		<result column="applyfee" property="applyfee" />
+		<result column="feetype" property="feetype" />
+		<result column="Instruct" property="Instruct" />
+		<result column="isPlaneticket" property="isPlaneticket" />
+		<result column="planefee" property="planefee" />
+		<result column="state" property="state" />
+		<result column="processid" property="processid" />
+		<result column="processname" property="processname" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        numid, applyuser, applydate, name, deptid, type, project, reason, days, applyfee, feetype, Instruct AS Instruct, isPlaneticket AS isPlaneticket, planefee, state, processid, processname
+    </sql>
+
+</mapper>
