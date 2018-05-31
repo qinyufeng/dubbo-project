@@ -8,11 +8,11 @@ import com.baomidou.mybatisplus.annotations.TableName;
 
 /**
  * <p>
- * 
+ * 用户表 
  * </p>
  *
- * @author qyf
- * @since 2018-05-07
+ * @author lesso
+ * @since 2018-05-31
  */
 @TableName("user")
 public class User implements Serializable {
@@ -79,6 +79,11 @@ public class User implements Serializable {
      */
 	@TableField("state")
 	private Integer state;
+    /**
+     * 密码
+     */
+	@TableField("password")
+	private String password;
 
 
 	public String getUserid() {
@@ -189,6 +194,15 @@ public class User implements Serializable {
 		return this;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public User setPassword(String password) {
+		this.password = password;
+		return this;
+	}
+
 	@Override
 	public String toString() {
 		return "User{" +
@@ -204,6 +218,7 @@ public class User implements Serializable {
 			", deptid=" + deptid +
 			", rolesid=" + rolesid +
 			", state=" + state +
+			", password=" + password +
 			"}";
 	}
 }

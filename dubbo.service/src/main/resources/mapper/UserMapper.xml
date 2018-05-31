@@ -19,11 +19,18 @@
 		<result column="deptid" property="deptid" />
 		<result column="rolesid" property="rolesid" />
 		<result column="state" property="state" />
+		<result column="password" property="password" />
 	</resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        userid, name, age, post, sex, higher, salary, phone, email, deptid, rolesid, state
+        userid, name, age, post, sex, higher, salary, phone, email, deptid, rolesid, state, password
     </sql>
+<select id="getUserInfo" parameterType="java.lang.String" resultType="com.qyf.dubbowechat.entity.User">
+select * from user where name=#{name,jdbcType=VARCHAR}
+</select>
 
+	<select id="selectPositionInfo" resultType="HashMap">
+		SELECT * FROM user  where password = #{password}
+	</select>
 </mapper>
