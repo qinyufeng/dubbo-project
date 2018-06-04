@@ -20,7 +20,6 @@ import com.alibaba.dubbo.config.annotation.Service;
  */
 @Component
 @Service(interfaceClass =UserService.class)
-//public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserMapper userMapper;

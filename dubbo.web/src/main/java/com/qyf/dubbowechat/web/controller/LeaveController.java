@@ -1,9 +1,8 @@
 package com.qyf.dubbowechat.web.controller;
 
-
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
+
+import io.swagger.annotations.Api;
 
 /**
  * <p>
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2018-05-31
  */
 @RestController
-@RequestMapping("/leave")
+@Api(value = "/", description ="数据接口")
 public class LeaveController {
 	
 }
